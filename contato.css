@@ -1,0 +1,287 @@
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f6f2;
+    color: #142c3e;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 92%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* ==========================
+   MENU PRINCIPAL (Idêntico à Imagem)
+========================== */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.brand-mark {
+    font-size: 38px;
+}
+
+.brand small {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-top: 8px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase; /* Força letras maiúsculas */
+    letter-spacing: 1.5px; /* Espaçamento idêntico ao da imagem */
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d7e9dc;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #d7e9dc;
+    padding-bottom: 7px;
+}
+
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 50px;
+    background-color: #d7e9dc;
+    color: #142c3e;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+.btn-dark {
+    background-color: #063f3c;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #145b53;
+    color: white;
+}
+
+
+/* ==========================
+   BANNER DA PÁGINA DE CONTATO
+========================== */
+
+.hero.contact {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 25, 36, 0.85),
+            rgba(5, 25, 36, 0.30)
+        ),
+        url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=2000&q=85');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+    padding: 130px 0 45px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 800;
+    line-height: 1.02;
+    margin: 14px 0;
+}
+
+.hero p {
+    max-width: 520px;
+    font-size: 16px;
+}
+
+
+/* ==========================
+   SEÇÃO DE CONTATO (CONTEÚDO)
+========================== */
+
+.section {
+    padding: 60px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info h2,
+.contact-form-wrapper h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #142c3e;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #63727a;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(18, 44, 60, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #142c3e;
+    margin-bottom: 3px;
+}
+
+.info-card span {
+    color: #63727a;
+    font-size: 14px;
+}
+
+
+/* ==========================
+   ESTILO DO FORMULÁRIO
+========================== */
+
+.contact-form-wrapper {
+    background-color: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 7px 24px rgba(18, 44, 60, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #142c3e;
+    margin-bottom: 8px; /* Dá o espaço correto entre o texto e a caixinha */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #d0d7d6;
+    border-radius: 12px;
+    background-color: #fcfcfc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #142c3e;
+    outline: none;
+    transition: 0.3s;
+}
